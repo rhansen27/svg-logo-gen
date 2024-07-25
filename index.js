@@ -1,9 +1,6 @@
 const inquirer = require("inquirer");
 const { Circle, Triangle, Square, Shape } = require("./lib/Shapes");
 const fs = require("fs/promises");
-const { type } = require("os");
-const { choices } = require("yargs");
-const { validate } = require("@babel/types");
 
 let shape;
 
