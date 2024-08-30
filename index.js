@@ -1,6 +1,6 @@
-const inquirer = require("inquirer");
-const { Circle, Triangle, Square, Shape } = require("./lib/Shapes");
-const fs = require("fs/promises");
+import inquirer from "inquirer";
+import { Circle, Triangle, Square, Shape } from "./lib/Shapes.js";
+import fs from "fs/promises";
 
 let shape;
 
@@ -65,3 +65,5 @@ async function createSVG(shape, filename) {
   await fs.writeFile(`./examples/${filename}.svg`, shape.render());
   console.log(`File created at ./examples/${filename}.svg`);
 }
+
+init();
